@@ -20,6 +20,8 @@ app.get("/api/allshoes", async (req, res) => {
   }
 });
 
+app.post("/api/allshoes", async (req, res) => {});
+
 app.listen(port, () => {
   console.log(`App listing port ${port}`);
 });

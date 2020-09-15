@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function SelectShoes(props) {
   const { AllshoesName, InputName } = props;
@@ -7,13 +8,15 @@ export default function SelectShoes(props) {
   });
   console.log(res);
   return (
-    <div>
+    <div className="listContainer">
       {res.map((ele) => {
         return (
-          <div>
-            <p>{ele.name}</p>
-            <p>{ele.color}</p>
-            <p>{ele.type}</p>
+          <div className="infoCard">
+            <p className="name">{ele.name}</p>
+            <p className="color">{ele.color}</p>
+            <p className="type">{ele.type}</p>
+            <p className="year">{ele.where_to_bought}</p>
+            <p className="where">{ele.year_bounght}</p>
           </div>
         );
       })}

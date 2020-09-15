@@ -1,28 +1,12 @@
-/* This is original setting for css */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* CSS */
 
 .App {
-  text-align: center;
+  /* text-align: center; */
   margin: 0 auto;
 }
 
 .img_container {
-  width: 60%;
+  width: 70%;
   overflow-x: scroll;
   /* justify-content: center; */
   display: flex;
@@ -32,15 +16,37 @@
   width: 350px;
 }
 
+/* each info for shoes */
+.infoCard {
+  width: 200px;
+  flex-wrap: wrap;
+  padding-left: 8px;
+  padding-top: 6px;
+  margin: 0 8px;
+  border: 1px solid black;
+  transition: all 0.6s ease 0s;
+  /* overflow-y: scroll; */
+  /* display: flex; */
+}
+
+.infoCard:hover {
+  background: rgb(252, 212, 226);
+  opacity: 0.8;
+  transform: translateY(+0.18em);
+}
+
 .main_container {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 85px;
 }
 
 h1 {
   font-family: "Libre Barcode 128 Text", cursive;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: lighter;
+  margin-left: 20px;
 }
 
 .name {
@@ -48,10 +54,19 @@ h1 {
   font-size: 12px;
 }
 
-.infoCard {
-  border: 1px solid black;
-}
-
 .listContainer {
   display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  margin-top: 40px;
+  position: relative;
+  top: 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  border-bottom: 1px solid gray;
+  width: 100%;
 }

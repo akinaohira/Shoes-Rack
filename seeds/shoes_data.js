@@ -42,6 +42,24 @@ exports.seed = async function (knex) {
           year_bounght: "2011",
           where_to_bought: "USA Hawaii",
         },
+        {
+          id: 5,
+          name: " CONS One Start Pro",
+          color: "Creame",
+          type: "sneaker",
+          size: "US_7",
+          year_bounght: "2009",
+          where_to_bought: "USA Cicago",
+        },
+        {
+          id: 6,
+          name: " CHUCK TAYLOR 1970S",
+          color: "Blue",
+          type: "sneaker",
+          size: "US_7",
+          year_bounght: "2008",
+          where_to_bought: "KOREA SOUl",
+        },
       ]);
     });
 };
