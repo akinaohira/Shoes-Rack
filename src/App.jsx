@@ -12,22 +12,39 @@ import shoesGreen from "./img/shoesGreen.png";
 import shoesBlue from "./img/shoesBlues.png";
 import shoesCons from "./img/shoesCons.png";
 import shoesRed from "./img/shoesRed.png";
+import shoesRed01 from "./img/shoesRed01.png";
+import shoesPink01 from "./img/shoesPink01.png";
+import shoes01 from "./img/shoes01.png";
+import shoesBas from "./img/shoesbas.png";
+import shoesGaru from "./img/shoesGaru.png";
+import shoes03 from "./img/shoes03.png";
 
 //Components
 import Allshoes from "./allshoes";
 import SelectedShoes from "./SelectShoes";
+import YearBy from "./YearBy";
 
 export default function App() {
   const [inputName, setInputName] = useState();
   const [allshoesName, setallShoesName] = useState([]);
-  const [currentView, setCurrentView] = useState(false);
+  const [yearView, setYearView] = useState(false);
   const allImage = {
-    1: shoesCOMME,
+    1: shoesBlack,
     2: shoesFire,
-    3: shoesBlack,
-    4: shoesFireBlack,
-    5: shoesCamo,
-    6: shoesGreen,
+    3: shoesRed01,
+    4: shoesGreen,
+    5: shoes01,
+    6: shoesBlue,
+    7: shoesCOMME,
+    8: shoesFireBlack,
+    9: shoesGaru,
+    10: shoesBas,
+    11: shoesCamo,
+    12: shoesBlue,
+    13: shoesBlack,
+    14: shoesPink01,
+    15: shoesFireBlack,
+    16: shoes03,
   };
 
   useEffect(async () => {
@@ -41,40 +58,60 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <header className="header">
         <h1>SHOES RACK</h1>
-        <div className="filterBox">
-          <input
-            type="text"
-            placeholder="type"
-            onChange={(e) => setInputName(e.target.value)}
-          />
+        <div className="menu">
+          <div
+            onClick={() => {
+              setYearView(false);
+            }}
+            className="btn"
+          >
+            HOME
+          </div>
+          <div
+            onClick={() => {
+              setYearView(true);
+            }}
+            className="btn"
+          >
+            COLOR
+          </div>
+          <div className="btn">PLACE</div>
         </div>
       </header>
-      <div className="main_container">
-        <div className="img_container">
-          <img className="img" src={shoesCOMME} />
-          <img className="img" src={shoesFire} />
-          <img className="img" src={shoesBlack} />
-          <img className="img" src={shoesFireBlack} />
-          <img className="img" src={shoesCamo} />
-          <img className="img" src={shoesGreen} />
-          <img className="img" src={shoesBlue} />
-          <img className="img" src={shoesCons} />
-          <img className="img" src={shoesRed} />
+      <div className="App">
+        <div className="main_container">
+          <div className="img_container">
+            <img className="img" src={shoesCOMME} />
+            <img className="img" src={shoesFire} />
+            <img className="img" src={shoesBlack} />
+            <img className="img" src={shoesFireBlack} />
+            <img className="img" src={shoesCamo} />
+            <img className="img" src={shoesGreen} />
+            <img className="img" src={shoesBlue} />
+            <img className="img" src={shoesCons} />
+            <img className="img" src={shoesRed} />
+            <img className="img" src={shoesRed01} />
+            <img className="img" src={shoesPink01} />
+            <img className="img" src={shoesBas} />
+            <img className="img" src={shoes01} />
+            <img className="img" src={shoesGaru} />
+            <img className="img" src={shoes03} />
+          </div>
         </div>
+        {yearView ? (
+          <YearBy AllshoesName={allshoesName} AllImage={allImage} />
+        ) : (
+          <Allshoes
+            SetCurrentView="setCurrentView"
+            AllshoesName={allshoesName}
+            InputName={inputName}
+            AllImage={allImage}
+          />
+        )}
       </div>
-      {inputName ? (
-        <SelectedShoes InputName={inputName} AllshoesName={allshoesName} />
-      ) : (
-        <Allshoes
-          SetCurrentView="setCurrentView"
-          AllshoesName={allshoesName}
-          InputName={inputName}
-          AllImage={allImage}
-        />
-      )}
     </div>
   );
 }

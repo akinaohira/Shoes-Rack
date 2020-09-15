@@ -1,10 +1,27 @@
 /* CSS */
 
 .App {
-  /* text-align: center; */
-  margin: 0 auto;
+  height: 700px;
+  overflow: scroll;
+  padding-top: 100px;
 }
 
+h1 {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 30px;
+  color: white;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+/* each info for shoes */
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  /* top: 85px; */
+}
 .img_container {
   width: 70%;
   overflow-x: scroll;
@@ -16,16 +33,31 @@
   width: 350px;
 }
 
-/* each info for shoes */
+/* shoes .list */
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* position: relative; */
+  /* top: 80px; */
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .infoCard {
   width: 200px;
   flex-wrap: wrap;
   padding-left: 8px;
   padding-top: 6px;
-  margin: 0 8px;
+  margin: 4px 8px;
   border: 1px solid black;
   transition: all 0.6s ease 0s;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   /* display: flex; */
 }
 
@@ -35,38 +67,56 @@
   transform: translateY(+0.18em);
 }
 
-.main_container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 85px;
-}
-
-h1 {
-  font-family: "Libre Barcode 128 Text", cursive;
-  font-size: 50px;
-  font-weight: lighter;
-  margin-left: 20px;
-}
-
 .name {
   color: palevioletred;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
-.listContainer {
-  display: flex;
-  justify-content: center;
-  overflow-y: scroll;
-  margin-top: 40px;
-  position: relative;
-  top: 80px;
+.year,
+.color,
+.type,
+.year,
+.where {
+  font-size: 13px;
+  color: gray;
 }
 
+/* header */
 .header {
   display: flex;
-  justify-content: space-between;
   position: fixed;
   border-bottom: 1px solid gray;
   width: 100%;
+  top: 0;
+  background: black;
+}
+
+.menu {
+  display: flex;
+  margin-left: 8px;
+}
+
+.btn {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  border: 1px solid whitesmoke;
+  align-self: center;
+  margin: 0px 8px;
+  color: white;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  padding: 8px 12px;
+  border: 1px solid black;
+  align-self: center;
+  transition: color 0.8s;
 }
