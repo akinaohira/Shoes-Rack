@@ -1,8 +1,4 @@
 /* This is original setting for css */
-.App {
-  text-align: center;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -19,3 +15,43 @@
 }
 
 /* CSS */
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.img_container {
+  width: 60%;
+  overflow-x: scroll;
+  /* justify-content: center; */
+  display: flex;
+}
+
+.img {
+  width: 350px;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.name {
+  color: palevioletred;
+  font-size: 12px;
+}
+
+.infoCard {
+  border: 1px solid black;
+}
+
+.listContainer {
+  display: flex;
+}

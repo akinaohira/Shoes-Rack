@@ -6,14 +6,14 @@ const db = require("./knex.js");
 //set up static assets(image, css,html,image)
 // __dirname --> directory name of file is
 app.use(express.static(path.resolve(__dirname, "..", "build")));
-// listing port that setting in .env or default 4000
-const port = process.env.PORT || 4000;
+// backend default server 9000
+const port = process.env.PORT || 9000;
 
 // Api to get data from backend
 app.get("/api/allshoes", async (req, res) => {
   try {
     const allshoes = await db.select().table("shoesInfo");
-    res.send(allshoes);
+    res.json(allshoes);
   } catch (err) {
     console.error("Error loading locations!", err);
     res.sendStatus(500);
