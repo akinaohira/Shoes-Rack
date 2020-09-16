@@ -21,7 +21,7 @@ import shoes03 from "./img/shoes03.png";
 
 //Components
 import Allshoes from "./allshoes";
-import YearBy from "./YearBy";
+import White from "./White";
 
 export default function App() {
   const [inputName, setInputName] = useState();
@@ -101,7 +101,7 @@ export default function App() {
           </div>
         </div>
         {yearView ? (
-          <YearBy AllshoesName={allshoesName} AllImage={allImage} />
+          <White AllshoesName={allshoesName} AllImage={allImage} />
         ) : (
           <Allshoes
             SetCurrentView="setCurrentView"
