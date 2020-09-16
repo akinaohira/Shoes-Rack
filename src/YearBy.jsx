@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function YearBy(props) {
   const { AllshoesName, AllImage } = props;
@@ -17,44 +19,16 @@ export default function YearBy(props) {
                   <p className="type">{ele.type}</p>
                   <p className="year">{ele.where_to_bought}</p>
                   <p className="where">{ele.year_bounght}</p>
+                  <p>
+                    <FontAwesomeIcon
+                      icon={faCircle}
+                      size="lg"
+                      color={ele.color}
+                    />
+                  </p>
                 </div>
               );
             }
-            // if (ele.year_bounght === "RED") {
-            //   return (
-            //     <div className="infoCard">
-            //       <img width="100px" src={AllImage[ele.id]} />
-            //       <p className="name">{ele.name}</p>
-            //       <p className="color">{ele.color}</p>
-            //       <p className="type">{ele.type}</p>
-            //       <p className="year">{ele.where_to_bought}</p>
-            //       <p className="where">{ele.year_bounght}</p>
-            //     </div>
-            //   );
-            // }
-            // if (ele.year_bounght === "BLACK") {
-            //   return (
-            //     <div className="infoCard">
-            //       <img width="100px" src={AllImage[ele.id]} />
-            //       <p className="name">{ele.name}</p>
-            //       <p className="color">{ele.color}</p>
-            //       <p className="type">{ele.type}</p>
-            //       <p className="year">{ele.where_to_bought}</p>
-            //       <p className="where">{ele.year_bounght}</p>
-            //     </div>
-            //   );
-            // } else {
-            //   return (
-            //     <div className="infoCard">
-            //       <img width="100px" src={AllImage[ele.id]} />
-            //       <p className="name">{ele.name}</p>
-            //       <p className="color">{ele.color}</p>
-            //       <p className="type">{ele.type}</p>
-            //       <p className="year">{ele.where_to_bought}</p>
-            //       <p className="where">{ele.year_bounght}</p>
-            //     </div>
-            //   );
-            // }
           })}
         </div>
       </div>

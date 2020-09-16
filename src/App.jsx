@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import { Transition } from "react-transition-group";
 
 //image
 import shoesCOMME from "./img/shoesCOMME.png";
@@ -21,7 +22,6 @@ import shoes03 from "./img/shoes03.png";
 
 //Components
 import Allshoes from "./allshoes";
-import SelectedShoes from "./SelectShoes";
 import YearBy from "./YearBy";
 
 export default function App() {

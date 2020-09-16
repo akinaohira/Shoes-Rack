@@ -63,7 +63,7 @@ exports.seed = async function (knex) {
         {
           id: 7,
           name: " CHUCK TAYLOR 1970S",
-          color: "WHTIE",
+          color: "WHITE",
           type: "Sneaker",
           size: "US_7",
           year_bounght: "2008",
@@ -90,7 +90,7 @@ exports.seed = async function (knex) {
         {
           id: 10,
           name: " ALL STAR",
-          color: "WHTIE",
+          color: "WHITE",
           type: "Sneaker",
           size: "US_7",
           year_bounght: "2008",
@@ -99,7 +99,7 @@ exports.seed = async function (knex) {
         {
           id: 11,
           name: " ALL STAR",
-          color: "WHTIE",
+          color: "WHITE",
           type: "Sneaker",
           size: "US_7",
           year_bounght: "2006",
