@@ -30,10 +30,7 @@ export default function Allshoes(props) {
                     />
                   </p>
                   <p className="type">{ele.type}</p>
-                  <p className="year">
-                    {ele.where_to_bought}
-                    {}
-                  </p>
+                  <p className="year">{ele.where_to_bought}</p>
                   <p className="where">{ele.year_bounght}</p>
                 </div>
               );
