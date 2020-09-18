@@ -2,13 +2,11 @@
 require("dotenv").config();
 
 module.exports = {
-  //client is what database use
   development: {
     client: "postgresql",
     connection: {
-      connectionString: `postgres://${process.env.USER}@127.0.0.1:5432/shoesRack`,
+      connectionString: process.env.DATABASE_URL,
     },
-    database: "shoesRack",
     migrations: {
       directory: __dirname + "/migrations",
     },

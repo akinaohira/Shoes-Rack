@@ -24,7 +24,6 @@ import Allshoes from "./allshoes";
 import White from "./White";
 
 export default function App() {
-  const [inputName, setInputName] = useState();
   const [allshoesName, setallShoesName] = useState([]);
   const [yearView, setYearView] = useState(false);
   const allImage = {
@@ -46,14 +45,17 @@ export default function App() {
     16: shoes03,
   };
 
-  useEffect(async () => {
-    let res = await axios.get("api/allshoes");
-    // const result = [...allshoesName, ...res.data];
-    console.log("getting data!");
-    // console.log(res.data);
-    let result = [...allshoesName, ...res.data];
-    console.log(result);
-    setallShoesName(result);
+  useEffect(() => {
+    async function getData() {
+      let res = await axios.get("api/allshoes");
+      // const result = [...allshoesName, ...res.data];
+      console.log("getting data!");
+      // console.log(res.data);
+      // let result = [...allshoesName, ...res.data];
+      // setState can take fucntion, parameter is provious value return next value
+      setallShoesName((prevAllShoesname) => [...prevAllShoesname, ...res.data]);
+    }
+    getData();
   }, []);
 
   return (
@@ -83,21 +85,21 @@ export default function App() {
       <div className="App">
         <div className="main_container">
           <div className="img_container">
-            <img className="img" src={shoesCOMME} />
-            <img className="img" src={shoesFire} />
-            <img className="img" src={shoesBlack} />
-            <img className="img" src={shoesFireBlack} />
-            <img className="img" src={shoesCamo} />
-            <img className="img" src={shoesGreen} />
-            <img className="img" src={shoesBlue} />
-            <img className="img" src={shoesCons} />
-            <img className="img" src={shoesRed} />
-            <img className="img" src={shoesRed01} />
-            <img className="img" src={shoesPink01} />
-            <img className="img" src={shoesBas} />
-            <img className="img" src={shoes01} />
-            <img className="img" src={shoesGaru} />
-            <img className="img" src={shoes03} />
+            <img alt="shoes" className="img" src={shoesCOMME} />
+            <img alt="shoes" className="img" src={shoesFire} />
+            <img alt="shoes" className="img" src={shoesBlack} />
+            <img alt="shoes" className="img" src={shoesFireBlack} />
+            <img alt="shoes" className="img" src={shoesCamo} />
+            <img alt="shoes" className="img" src={shoesGreen} />
+            <img alt="shoes" className="img" src={shoesBlue} />
+            <img alt="shoes" className="img" src={shoesCons} />
+            <img alt="shoes" className="img" src={shoesRed} />
+            <img alt="shoes" className="img" src={shoesRed01} />
+            <img alt="shoes" className="img" src={shoesPink01} />
+            <img alt="shoes" className="img" src={shoesBas} />
+            <img alt="shoes" className="img" src={shoes01} />
+            <img alt="shoes" className="img" src={shoesGaru} />
+            <img alt="shoes" className="img" src={shoes03} />
           </div>
         </div>
         {yearView ? (
@@ -106,7 +108,6 @@ export default function App() {
           <Allshoes
             SetCurrentView="setCurrentView"
             AllshoesName={allshoesName}
-            InputName={inputName}
             AllImage={allImage}
           />
         )}

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faheart } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function White(props) {
   const { AllshoesName, AllImage } = props;
@@ -13,7 +13,7 @@ export default function White(props) {
             if (ele.color === "WHITE") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">
                     {ele.color}{" "}
@@ -28,6 +28,8 @@ export default function White(props) {
                   <p className="where">{ele.year_bounght}</p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -38,7 +40,7 @@ export default function White(props) {
             if (ele.color === "RED") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">{ele.color}</p>
                   <p className="type">{ele.type}</p>
@@ -53,6 +55,8 @@ export default function White(props) {
                   </p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -63,7 +67,7 @@ export default function White(props) {
             if (ele.color === "BLACK") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">{ele.color}</p>
                   <p className="type">{ele.type}</p>
@@ -78,6 +82,8 @@ export default function White(props) {
                   </p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -88,7 +94,7 @@ export default function White(props) {
             if (ele.color === "BLUE") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">{ele.color}</p>
                   <p className="type">{ele.type}</p>
@@ -103,6 +109,8 @@ export default function White(props) {
                   </p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -113,7 +121,7 @@ export default function White(props) {
             if (ele.color === "GRENN") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">{ele.color}</p>
                   <p className="type">{ele.type}</p>
@@ -128,6 +136,8 @@ export default function White(props) {
                   </p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -138,7 +148,7 @@ export default function White(props) {
             if (ele.color === "PINK") {
               return (
                 <div className="infoCard">
-                  <img width="100px" src={AllImage[ele.id]} />
+                  <img alt="shoes" width="100px" src={AllImage[ele.id]} />
                   <p className="name">{ele.name}</p>
                   <p className="color">{ele.color}</p>
                   <p className="type">{ele.type}</p>
@@ -153,6 +163,8 @@ export default function White(props) {
                   </p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>

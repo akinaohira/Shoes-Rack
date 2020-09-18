@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faFlagUsa } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { Slide } from "react-awesome-reveal";
 
 export default function Allshoes(props) {
@@ -15,6 +15,7 @@ export default function Allshoes(props) {
               return (
                 <div className="infoCard">
                   <img
+                    alt="shoes"
                     className="smalimg"
                     width="100px"
                     height="65px"

@@ -99,6 +99,8 @@ h1 {
   width: 100%;
   top: 0;
   background: black;
+  /* top of page (pancake /top of layer ) */
+  z-index: 1;
 }
 
 .menu {
