@@ -1,4 +1,4 @@
-<img src="/src/img/shoes_rack.png">
+<img src="./src/shoes_rack.png">
 
 ## Description
 Welcome to my Shoes Rack ❤️
