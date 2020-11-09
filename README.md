@@ -1,16 +1,9 @@
-<img width="300px" src="/src/img/shoesGaru.png">
+<img src="/src/img/shoes_rack.png">
 
 ## Description
-
-- This is to store your shoes data for who love shoes.
-- Available to store data list below.
-  - Name
-  - Color
-  - Size
-  - Type
-  - Where you bought
-  - When you bought
-    https://shoes-rack.herokuapp.com/
+Welcome to my Shoes Rack ❤️
+- This is to store informations of my shoes collections and display!
+- To see all shoes collections, click https://shoes-rack.herokuapp.com/  👟 !
 
 ## Available Scripts
 
@@ -30,8 +23,6 @@ Runs react script.
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
 ### `yarn knex:migrate:make "your file name"
 
